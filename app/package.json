@@ -1,13 +1,8 @@
 {
   "author": "brentli1",
-  "name": "webdev_boiler",
+  "name": "bb_mn_contact_example",
   "version": "0.1.0",
-  "dependencies": {
-    "underscore": "1.6.0",
-    "jquery": "^2.1.1",
-    "backbone": "^1.1.2",
-    "backbone.marionette": "^2.2.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^1.0.0",

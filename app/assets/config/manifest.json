@@ -11,10 +11,12 @@
 
 	"app" : {
 		"scripts" : [
-			"./assets/js/app-js/**/*.js"
+			"./assets/js/app-js/Models/**/*.js",
+			"./assets/js/app-js/Views/**/*.js",
+			"./assets/js/app-js/Controllers/**/*.js"
 		],
 		"styles" : [
-			"./assets/sass/**/*.scss"
+			"./assets/sass/styles.scss"
 		],
 		"templates" : [
 			"./assets/templates/**/*.hbs"

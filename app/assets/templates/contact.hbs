@@ -1,0 +1,18 @@
+<div class="contact--avatar-wrap">
+    <img class="contact--avatar" src="../img/contacts/{{ avatar }}">
+</div>
+<h3 class="contact--name">
+    {{name}}
+</h3>
+<ul class="contact--information">
+    <li>Phone Number: {{ tel }}</li>
+    <li>Email: {{ email }}</li>
+    <li>
+        <a href="#contacts/edit/{{id}}" class="js-edit-contact">
+            Edit
+        </a>
+        <a href="#contacts/delete/{{id}}" class="js-delete-contact">
+            Remove
+        </a>
+    </li>
+</ul>

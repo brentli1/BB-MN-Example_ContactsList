@@ -6,7 +6,7 @@ var gulp    = require('gulp'),
     wrap    = require('gulp-wrap');
 
 // Change the App name namespace here
-var namespace = 'MyApp.templates';
+var namespace = 'ContactManager.templates';
 // Create var for source
 var src = manifest.app.templates;
 
