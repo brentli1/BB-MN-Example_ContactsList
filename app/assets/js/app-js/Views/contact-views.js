@@ -1,13 +1,26 @@
-ContactManager.module('Contact', function(Contact, ContactManager, Backbone, Marionette, $, _) {
-    Contact.ContactItemView = Marionette.ItemView.extend({
+ContactManager.module('ContactMod', function(ContactMod, ContactManager, Backbone, Marionette, $, _) {
+    ContactMod.ContactItemView = Marionette.ItemView.extend({
         tagName: 'li',
         className: 'contact--wrap',
-        template: ContactManager.templates.contact
+        template: ContactManager.templates.contact,
+
+        ui: {
+            'edit'   :  '.js-edit-contact',
+            'delete' :  '.js-delete-contact'
+        },
+
+        triggers: {
+            'click @ui.edit'  :  'showEditPage'
+        },
+
+        onShowEditPage: function() {
+
+        }
     });
 
-    Contact.ContactCollectionView = Marionette.CollectionView.extend({
+    ContactMod.ContactCollectionView = Marionette.CollectionView.extend({
         tagName: 'ul',
         className: 'contacts-container',
-        childView: Contact.ContactItemView
+        childView: ContactMod.ContactItemView
     });
 });
