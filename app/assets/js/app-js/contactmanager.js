@@ -1,16 +1,19 @@
 var ContactManager = new Marionette.Application({
-    onStart: function() {
+    start: function() {
+        router = new ContactManager.Router();
+        ContactManager.contactsController = new ContactManager.ContactsController();
+
         Backbone.history.start();
     }
 });
 
 // ContactManager Router
-ContactManager.router = new Backbone.Router({
+ContactManager.Router = Backbone.Router.extend({
     routes: {
-        ''                  : 'home',
-        'contacts'          : 'showContacts',
-        'contacts/new'      : 'newContact',
-        'contacts/edit/:id' : 'editContact'
+        ''                      : 'home',
+        'contacts'              : 'showContacts',
+        'contacts/new'          : 'newContact',
+        'contacts/edit/:id'     : 'editContact'
       }
 });
 
