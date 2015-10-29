@@ -13,8 +13,7 @@
 		"scripts" : [
 			"./assets/js/app-js/Models/**/*.js",
 			"./assets/js/app-js/Views/**/*.js",
-			"./assets/js/app-js/Controllers/**/*.js",
-			"./assets/js/app-js/Config/**/*.js"
+			"./assets/js/app-js/Controllers/**/*.js"
 		],
 		"styles" : [
 			"./assets/sass/styles.scss"

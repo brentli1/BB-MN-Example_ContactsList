@@ -1,13 +1,13 @@
-ContactManager.module('Contacts', function(Contacts, ContactManager, Backbone, Marionette, $, _) {
-    Contacts.ContactItemView = Marionette.ItemView.extend({
-        tagName: 'li',
-        className: 'contact--wrap',
-        template: ContactManager.templates.contact
-    });
+// Contact manager Views
 
-    Contacts.ContactCollectionView = Marionette.CollectionView.extend({
-        tagName: 'ul',
-        className: 'contacts-container',
-        childView: Contacts.ContactItemView
-    });
+ContactManager.ContactView = Marionette.ItemView.extend({
+    tagName: 'li',
+    className: 'contact--wrap',
+    template: ContactManager.templates.contact
+});
+
+ContactManager.ContactsView = Marionette.CollectionView.extend({
+    tagName: 'ul',
+    className: 'contacts-container',
+    childView: ContactManager.ContactView
 });
