@@ -18,8 +18,11 @@ ContactManager.ContactsController = Marionette.Object.extend({
             var contactsView = new ContactManager.ContactsView({
                 collection: ContactManager.contacts
             });
+            var appLayout = new ContactManager.ContactsLayout();
 
-            ContactManager.getRegion('main_region').show(contactsView);
+            ContactManager.mainRegion.show(appLayout);
+            appLayout.contacts.show(contactsView);
+            appLayout.addNew.show(new ContactManager.AddNewButton());
         });
 
         router.on('route:newContact', function() {
@@ -33,7 +36,7 @@ ContactManager.ContactsController = Marionette.Object.extend({
                 // this.router.navigate('contacts', true);
             });
 
-            ContactManager.getRegion('main_region').show(newContactView);
+            ContactManager.mainRegion.show(newContactView);
         });
 
         router.on('route:editContact', function(id) {
@@ -43,7 +46,7 @@ ContactManager.ContactsController = Marionette.Object.extend({
                 editContactView = new ContactManager.ContactFormView({
                     model: contact
                 });
-                ContactManager.getRegion('main_region').show(editContactView);
+                ContactManager.mainRegion.show(editContactView);
             } else {
                 router.navigate('contacts', true);
             }

@@ -19,5 +19,5 @@ ContactManager.Router = Backbone.Router.extend({
 
 // Add main region
 ContactManager.addRegions({
-    main_region: '#main-region'
+    mainRegion: '#main-region'
 });

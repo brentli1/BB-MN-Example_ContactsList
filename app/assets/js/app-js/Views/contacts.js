@@ -21,3 +21,19 @@ ContactManager.ContactsView = Marionette.CollectionView.extend({
     className: 'contacts-container',
     childView: ContactManager.ContactView
 });
+
+ContactManager.ContactsLayout = Marionette.LayoutView.extend({
+    template: ContactManager.templates.contactslayout,
+    regions: {
+        contacts: '#contacts',
+        addNew  : '#add-new'
+    }
+});
+
+ContactManager.AddNewButton = Marionette.ItemView.extend({
+    template: _.template('<a href="#contacts/new" class="btn add-btn">Add Contact</a>')
+});
+
+ContactManager.ContactFormView = Marionette.ItemView.extend({
+    template: ContactManager.templates.contactform
+});
